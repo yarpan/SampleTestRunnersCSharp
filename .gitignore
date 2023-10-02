@@ -1,0 +1,17 @@
+### .gitignore
+.vs
+bin
+obj
+packages
+output
+screenshots
+*csproj.user
+*StyleCop.Cache
+*.suo
+*.user
+
+### ReSharper ###
+_ReSharper.*
+
+### VS Code ###
+.vscode/
