@@ -1,24 +1,29 @@
 namespace NUnitRunner
 {
-    public class Tests
+    public class SimpleTest
     {
+
         [SetUp]
         public void Setup()
         {
-            Console.WriteLine("This is Test Initialization");
+            Console.WriteLine("SetUp");
         }
+
 
         [Test]
         public void Test1()
         {
-            Console.WriteLine("Simple Test");
+            Console.WriteLine("Test1");
             Assert.Pass();
         }
+
 
         [TearDown]
         public void TearDown()
         {
-            Console.WriteLine("This is Test TearDown");
+            Console.WriteLine("TearDown");
         }
+
+
     }
 }
