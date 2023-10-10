@@ -8,21 +8,21 @@ namespace MSTestRunner
     {
 
         [TestInitialize]
-        public void BeforeTest()
+        public void BeforeTestSingle()
         {
             Console.WriteLine("BeforeTest");
         }
 
 
         [TestMethod]
-        public void Test1()
+        public void TestSingle()
         {
             Console.WriteLine("Test1");
         }
 
 
         [TestCleanup]
-        public void AfterTest()
+        public void AfterTestSingle()
         {
             Console.WriteLine("AfterTest");
         }

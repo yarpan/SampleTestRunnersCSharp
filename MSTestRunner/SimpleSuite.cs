@@ -6,13 +6,6 @@ namespace MSTestRunner
     [TestClass]
     public class SimpleSuite
     {
-        private TestContext testContextInstance;
-
-        public TestContext TestContext
-        {
-            get { return testContextInstance; }
-            set { testContextInstance = value; }
-        }
 
         [ClassInitialize]
         public static void BeforeClass(TestContext a)
