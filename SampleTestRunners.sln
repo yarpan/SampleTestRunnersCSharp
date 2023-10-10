@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitRunner", "NUnitRunner\NUnitRunner.csproj", "{03FD613C-C27E-47F5-B39F-0FAC46A0E1DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitParallelRuner", "NUnitParallelRuner\NUnitParallelRuner.csproj", "{A7BD8644-3210-4AD7-9EAF-36A4AE2E4E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitParallelRuner", "NUnitParallelRuner\NUnitParallelRuner.csproj", "{A7BD8644-3210-4AD7-9EAF-36A4AE2E4E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTestRunner", "MSTestRunner\MSTestRunner.csproj", "{53B72624-8636-4AF1-A944-A7C047D7917C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A7BD8644-3210-4AD7-9EAF-36A4AE2E4E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7BD8644-3210-4AD7-9EAF-36A4AE2E4E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7BD8644-3210-4AD7-9EAF-36A4AE2E4E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B72624-8636-4AF1-A944-A7C047D7917C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B72624-8636-4AF1-A944-A7C047D7917C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B72624-8636-4AF1-A944-A7C047D7917C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B72624-8636-4AF1-A944-A7C047D7917C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
