@@ -34,7 +34,7 @@ namespace MSTestRunner
             Console.WriteLine("Test2");
         }
 
-        [TestMethod]
+        [TestMethod("Test with custom testname")]
         public void Test3()
         {
             Console.WriteLine("Test3");

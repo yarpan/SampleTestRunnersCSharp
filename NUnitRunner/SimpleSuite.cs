@@ -32,7 +32,9 @@ namespace NUnitRunner
             Assert.Pass();
         }
 
-        [Test]
+        [TestCase(TestName = "Test with custom testname")]
+        //[Test, TestName = "Test with custom testname"]
+        //[Test(null, TestName = "Test Case #1, Category: First, Category: Second")]
         public void Test3()
         {
             Console.WriteLine("Test3");
