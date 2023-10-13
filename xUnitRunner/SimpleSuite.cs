@@ -1,33 +1,22 @@
-using Xunit.Abstractions;
-
-
+﻿
 namespace xUnitRunner
 {
-    public abstract class TestsBase : IDisposable
+    public class SimpleSuite : IDisposable
     {
-        protected TestsBase() //Constructor as test initialize
+        private readonly ITestOutputHelper _testOutputHelper;
+        public SimpleSuite(ITestOutputHelper testOutputHelper) //Constructor as test initialize
         {
-            // Do "global" initialization here;
             // Called before every test method.
+            _testOutputHelper = testOutputHelper;
+            _testOutputHelper.WriteLine("Before Test");
         }
 
         public void Dispose()
         {
-            // Do "global" teardown here;
             // Called after every test method.
+            _testOutputHelper.WriteLine("After Test");
         }
-    }
 
-
-
-
-    public class SimpleSuite : TestsBase
-    {
-        private readonly ITestOutputHelper _testOutputHelper;
-        public SimpleSuite(ITestOutputHelper testOutputHelper)
-        {
-            _testOutputHelper = testOutputHelper;
-        }
 
 
         [Fact]
@@ -49,11 +38,5 @@ namespace xUnitRunner
         }
 
     }
-
-
-
-
-
-
 
 }

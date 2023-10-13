@@ -1,28 +1,25 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Diagnostics;
-using Xunit.Abstractions;
-using Assert = Xunit.Assert;
-
+﻿
 namespace xUnitRunner
 {
-    public abstract class DataDrivenTest : IDisposable
+    public class ParametrizedTest : IDisposable
     {
         private readonly ITestOutputHelper _testOutputHelper;
-        protected DataDrivenTest(ITestOutputHelper testOutputHelper)
+        public ParametrizedTest(ITestOutputHelper testOutputHelper) //Constructor as test initialize
         {
-            // Do "global" initialization here; Called before every test method.
+            // Called before every test method.
             _testOutputHelper = testOutputHelper;
-            _testOutputHelper.WriteLine("Initialization");
+            _testOutputHelper.WriteLine("Before Test");
         }
 
         public void Dispose()
         {
-            // Do "global" teardown here; Called after every test method.
-            _testOutputHelper.WriteLine("Dispose");
+            // Called after every test method.
+            _testOutputHelper.WriteLine("After Test");
         }
 
 
-        [Theory]
+
+        [Theory(DisplayName = "Paramerized Test Name")]
         [InlineData("", true)]
         [InlineData("a", true)]
         [InlineData("aa", true)]
@@ -39,6 +36,7 @@ namespace xUnitRunner
         }
 
 
+
         public bool IsDataPalindrom(string sourceStr)
         {
             sourceStr = string.Join("", sourceStr.Split(' '));
@@ -52,23 +50,7 @@ namespace xUnitRunner
             return true;
         }
 
-        [Theory]
-        [InlineData("test@test.com", "test.com")]
-        [InlineData("milan@milanjovanovic.tech", "milanjovanovic.tech")]
-        public void EmailParser_Should_Return_Domain(string email, string expectedDomain)
-        {
-            // Arrange
-
-
-            // Act
-            _testOutputHelper.WriteLine("TestDD");
-
-            // Assert
-
-        }
-
-
-
-    }
+     }
 
 }
+
